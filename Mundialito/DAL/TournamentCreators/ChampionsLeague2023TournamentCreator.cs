@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Mundialito.DAL.DBCreators
 {
-    public class ChampionsLeague2021TournamentCreator : ITournamentCreator
+    public class ChampionsLeague2023TournamentCreator : ITournamentCreator
     {
         public List<Team> GetTeams()
         {

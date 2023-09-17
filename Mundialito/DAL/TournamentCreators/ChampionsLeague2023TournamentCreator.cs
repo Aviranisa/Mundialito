@@ -12,23 +12,23 @@ namespace Mundialito.DAL.DBCreators
         public List<Team> GetTeams()
         {
             var teams = new List<Team>();
-            teams.Add(CreateTeam("AFC Ajax", "NED"));
-            teams.Add(CreateTeam("Atalanta BC", "ITA"));
+            teams.Add(CreateTeam("Royal Antwerp F.C.", "BLG"));
+            teams.Add(CreateTeam("Arsenal F.C.", "ENG"));
             teams.Add(CreateTeam("Club Atlético de Madrid", "ESP"));
             teams.Add(CreateTeam("FC Barcelona", "ESP"));
             teams.Add(CreateTeam("FC Bayern München", "GER"));
             teams.Add(CreateTeam("SL Benfica", "POR"));
-            teams.Add(CreateTeam("Beşiktaş JK", "TUR"));
-            teams.Add(CreateTeam("Chelsea FC", "ENG"));
-            teams.Add(CreateTeam("Club Brugge", "BEL"));
+            teams.Add(CreateTeam("RC Lens", "FRA"));
+            teams.Add(CreateTeam("Feyenoord", "NE"));
+            teams.Add(CreateTeam("Newcastle United F.C.", "ENG"));
             teams.Add(CreateTeam("Borussia Dortmund", "GER"));
-            teams.Add(CreateTeam("FC Dynamo Kyiv", "UKR"));
+            teams.Add(CreateTeam("Galatasaray S.K.", "TUR"));
             teams.Add(CreateTeam("FC Internazionale Milano", "ITA"));
-            teams.Add(CreateTeam("Juventus", "ITA"));
+            teams.Add(CreateTeam("Celtic F.C.", "SCT"));
             teams.Add(CreateTeam("RB Leipzig", "GER"));
-            teams.Add(CreateTeam("Liverpool FC", "ENG"));
-            teams.Add(CreateTeam("LOSC Lille", "FRA"));
-            teams.Add(CreateTeam("Malmö FF", "SWE"));
+            teams.Add(CreateTeam("SSC Napoli", "ITA"));
+            teams.Add(CreateTeam("Real Sociedad", "ESP"));
+            teams.Add(CreateTeam("S.C. Braga", "BLG"));
             teams.Add(CreateTeam("Manchester City FC", "ENG"));
             teams.Add(CreateTeam("Manchester United", "ENG"));
             teams.Add(CreateTeam("AC Milan", "ITA"));
@@ -38,12 +38,12 @@ namespace Mundialito.DAL.DBCreators
             teams.Add(CreateTeam("FC Salzburg", "AUT"));
             teams.Add(CreateTeam("Sevilla FC", "ESP"));
             teams.Add(CreateTeam("FC Shakhtar Donetsk", "UKR"));
-            teams.Add(CreateTeam("FC Sheriff Tiraspol", "MDA"));
-            teams.Add(CreateTeam("Sporting Clube de Portugal", "POR"));
-            teams.Add(CreateTeam("Villarreal CF", "ESP"));
-            teams.Add(CreateTeam("VfL Wolfsburg", "GER"));
+            teams.Add(CreateTeam("PSV", "NE"));
+            teams.Add(CreateTeam("FK Crvena zvezda", "SRB"));
+            teams.Add(CreateTeam("S.S. Lazio", "ITA"));
+            teams.Add(CreateTeam("1. FC Union Berlin", "GER"));
             teams.Add(CreateTeam("BSC Young Boys", "SUI"));
-            teams.Add(CreateTeam("FC Zenit", "RUS"));
+            teams.Add(CreateTeam("F.C. Copenhagen", "DEN"));
             return teams;
         }
 
@@ -52,9 +52,9 @@ namespace Mundialito.DAL.DBCreators
             var games = new List<Game>();
             games.Add(new Game
             {
-                HomeTeamId = teams["BSC Young Boys"].TeamId,
-                AwayTeamId = teams["Manchester United"].TeamId,
-                Date = GetFixedDate(new DateTime(2021, 9, 14, 19, 45, 0)),
+                HomeTeamId = teams["AC Milan"].TeamId,
+                AwayTeamId = teams["Newcastle United F.C."].TeamId,
+                Date = GetFixedDate(new DateTime(2023, 9, 19, 19, 45, 0)),
                 StadiumId = stadiums["Stadion Wankdorf"].StadiumId
             });
             return games;
@@ -63,7 +63,7 @@ namespace Mundialito.DAL.DBCreators
         public List<Stadium> GetStadiums()
         {
             var stadiums = new List<Stadium>();
-            stadiums.Add(new Stadium() { Name = "Stadion Wankdorf", Capacity = 10000, City = "Berne" });
+            stadiums.Add(new Stadium() { Name = "San Siro Stadium", Capacity = 80000, City = "Milano" });
 
 
             return stadiums;
@@ -73,25 +73,14 @@ namespace Mundialito.DAL.DBCreators
         {
             var players = new List<Player>();
             players.Add(new Player() { Name = "Erling Braut Haaland" });
-            players.Add(new Player() { Name = "Lionel Messi" });
             players.Add(new Player() { Name = "Robert Lewandowski" });
             players.Add(new Player() { Name = "Romelu Lukaku" });
-            players.Add(new Player() { Name = "Cristiano Ronaldo" });
-            players.Add(new Player() { Name = "Karim Benzema" });
             players.Add(new Player() { Name = "Kylian Mbappe-Lottin" });
-            players.Add(new Player() { Name = "Mohamed Salah" });
-            players.Add(new Player() { Name = "Junior Neymar" });
             players.Add(new Player() { Name = "Miguel Bruno Fernandes" });
             players.Add(new Player() { Name = "Antoine Griezmann" });
-            players.Add(new Player() { Name = "Memphis Depay" });
-            players.Add(new Player() { Name = "Raheem Sterling" });
-            players.Add(new Player() { Name = "Edinson Cavani" });
-            players.Add(new Player() { Name = "Diogo Jota" });
             players.Add(new Player() { Name = "Fernando Gabriel Jesus" });
             players.Add(new Player() { Name = "Ferran Torres" });
             players.Add(new Player() { Name = "Jose Vinicius Junior" });
-            players.Add(new Player() { Name = "Sadio Mane" });
-            players.Add(new Player() { Name = "Luis Suarez" });
             players.Add(new Player() { Name = "Other" });
             return players;
         }

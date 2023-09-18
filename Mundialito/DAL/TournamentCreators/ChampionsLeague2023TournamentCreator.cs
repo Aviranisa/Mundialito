@@ -68,7 +68,6 @@ GetGames();
 
             return stadiums;
         }
-GetStadiums()
         public List<Player> GetPlayers()
         {
             var players = new List<Player>();

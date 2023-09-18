@@ -46,7 +46,6 @@ namespace Mundialito.DAL.DBCreators
             teams.Add(CreateTeam("F.C. Copenhagen", "DEN"));
             return teams;
         }
-GetTeams();
         public List<Game> GetGames(Dictionary<String, Stadium> stadiums, Dictionary<String, Team> teams)
         {
             var games = new List<Game>();
@@ -59,7 +58,6 @@ GetTeams();
             });
             return games;
         }
-GetGames();
         public List<Stadium> GetStadiums()
         {
             var stadiums = new List<Stadium>();
@@ -93,7 +91,6 @@ GetGames();
         {
             return new Team() { Name = name, ShortName = shortName, Flag = string.Format("https://api.fifa.com/api/v1/picture/flags-sq-2/{0}", shortName), Logo = string.Format("https://api.fifa.com/api/v1/picture/flags-sq-2/{0}", shortName) };
         }
-GetPlayers();
 
     }
 }

@@ -46,7 +46,7 @@ namespace Mundialito.DAL.DBCreators
             teams.Add(CreateTeam("F.C. Copenhagen", "DEN"));
             return teams;
         }
-
+GetTeams();
         public List<Game> GetGames(Dictionary<String, Stadium> stadiums, Dictionary<String, Team> teams)
         {
             var games = new List<Game>();
@@ -59,7 +59,7 @@ namespace Mundialito.DAL.DBCreators
             });
             return games;
         }
-
+GetGames();
         public List<Stadium> GetStadiums()
         {
             var stadiums = new List<Stadium>();
@@ -68,7 +68,7 @@ namespace Mundialito.DAL.DBCreators
 
             return stadiums;
         }
-
+GetStadiums()
         public List<Player> GetPlayers()
         {
             var players = new List<Player>();
@@ -84,7 +84,7 @@ namespace Mundialito.DAL.DBCreators
             players.Add(new Player() { Name = "Other" });
             return players;
         }
-
+GetPlayers();
         private DateTime GetFixedDate(DateTime date)
         {
             return date.Subtract(TimeSpan.FromHours(3));

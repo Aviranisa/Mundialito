@@ -83,7 +83,6 @@ GetGames();
             players.Add(new Player() { Name = "Other" });
             return players;
         }
-GetPlayers();
         private DateTime GetFixedDate(DateTime date)
         {
             return date.Subtract(TimeSpan.FromHours(3));
@@ -94,5 +93,7 @@ GetPlayers();
         {
             return new Team() { Name = name, ShortName = shortName, Flag = string.Format("https://api.fifa.com/api/v1/picture/flags-sq-2/{0}", shortName), Logo = string.Format("https://api.fifa.com/api/v1/picture/flags-sq-2/{0}", shortName) };
         }
+GetPlayers();
+
     }
 }

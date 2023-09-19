@@ -30,7 +30,7 @@ namespace Mundialito.DAL
 
             CreateAdminRoleAndUsers(context);
 
-            var creatorName = WebConfigurationManager.AppSettings["TournamentDBCreatorName"];
+            var creatorName = WebConfigurationManager.AppSettings["ChampionsLeague2023TournamentCreator"];
 
             if (!String.IsNullOrEmpty(creatorName))
             {
